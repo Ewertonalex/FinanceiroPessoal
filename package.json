@@ -1,0 +1,56 @@
+{
+  "name": "controle-financeiro-pessoal",
+  "version": "1.0.0",
+  "description": "Sistema completo de controle financeiro pessoal",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "build": "electron-builder",
+    "dist": "electron-builder --win --x64",
+    "pack": "electron-builder --dir",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "keywords": [
+    "controle-financeiro",
+    "finanças-pessoais",
+    "orçamento",
+    "cartão-de-crédito",
+    "dívidas",
+    "parcelas"
+  ],
+  "author": "Ewerton Alexander",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.9.1"
+  },
+  "build": {
+    "appId": "com.ewertonalex.controlefinanceiro",
+    "productName": "Controle Financeiro Pessoal",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/**/*",
+      "!dist/**/*",
+      "!build/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Controle Financeiro Pessoal"
+    }
+  }
+}

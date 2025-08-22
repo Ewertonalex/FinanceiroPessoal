@@ -1,0 +1,34 @@
+appId: com.ewertonalex.controlefinanceiro
+productName: Controle Financeiro Pessoal
+directories:
+  output: dist
+  buildResources: build
+files:
+  - "**/*"
+  - "!node_modules/**/*"
+  - "!dist/**/*"
+  - "!build/**/*"
+  - "!*.log"
+  - "!package-lock.json"
+  - "!yarn.lock"
+
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+  icon: assets/icon.ico
+  requestedExecutionLevel: asInvoker
+
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Controle Financeiro Pessoal
+  installerIcon: assets/icon.ico
+  uninstallerIcon: assets/icon.ico
+  installerHeaderIcon: assets/icon.ico
+  include: build/installer.nsh
+
+artifactName: "${productName}-${version}-${arch}.${ext}"

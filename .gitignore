@@ -21,9 +21,11 @@ yarn.lock
 *.tmp
 *.temp
 
-# Arquivos de build (se futuramente usar)
+# Arquivos de build do Electron
 dist/
 build/
+node_modules/
+package-lock.json
 
 # Arquivos de ambiente
 .env
