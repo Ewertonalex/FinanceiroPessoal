@@ -1,0 +1,654 @@
+/* Reset e configurações base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.month-selector {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btn-month {
+    background: #3498db;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+}
+
+.btn-month:hover {
+    background: #2980b9;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(52, 152, 219, 0.4);
+}
+
+.current-month {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 200px;
+}
+
+/* Cards de Resumo */
+.summary-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+}
+
+.income .card-icon {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+}
+
+.expense .card-icon {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+}
+
+.balance .card-icon {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+}
+
+.card-content h3 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+}
+
+.card-content p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+/* Formulários */
+.input-forms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form input,
+.form select {
+    padding: 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form input:focus,
+.form select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Select Customizado */
+.custom-select {
+    background: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.custom-select:hover {
+    border-color: #3498db;
+}
+
+/* Botões */
+.btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #e74c3c, #c0392b);
+    color: white;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+    color: white;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+    color: white;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, #17a2b8, #138496);
+    color: white;
+}
+
+.btn-secondary {
+    background: #95a5a6;
+    color: white;
+}
+
+/* Tabelas */
+.transactions {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.table-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.table-container h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.table th,
+.table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.table th {
+    background: #f8f9fa;
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+.table tbody tr:hover {
+    background: #f8f9fa;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.edit-btn {
+    background: #3498db;
+    color: white;
+}
+
+.delete-btn {
+    background: #e74c3c;
+    color: white;
+}
+
+.action-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Ações em Lote */
+.batch-actions {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.batch-actions h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+/* Cartões de Crédito */
+.credit-cards {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.credit-cards h3 {
+    color: #2c3e50;
+    margin-bottom: 30px;
+    font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-form,
+.debt-form {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.card-form h4,
+.debt-form h4 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.cards-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.card-item {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 20px;
+    border-left: 5px solid #3498db;
+}
+
+.card-item h5 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+}
+
+.card-item p {
+    color: #7f8c8d;
+    margin-bottom: 5px;
+}
+
+/* Lista de Dívidas - Layout Horizontal */
+.debts-list {
+    background: #f8f9fa;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.debts-list h4 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+}
+
+.debts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    align-items: start;
+}
+
+.debt-card-section {
+    background: white;
+    border-radius: 12px;
+    padding: 20px;
+    border-left: 4px solid #3498db;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    min-height: 200px;
+}
+
+.debt-card-section h5 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+}
+
+.debts-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.debt-item {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 15px;
+    border-left: 4px solid #e74c3c;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.debt-item.completed {
+    background: #e8f5e8;
+    border-left-color: #27ae60;
+    opacity: 0.8;
+}
+
+.debt-info {
+    flex: 1;
+    min-width: 200px;
+}
+
+.debt-item h6 {
+    color: #2c3e50;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.debt-item p {
+    color: #7f8c8d;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    line-height: 1.4;
+}
+
+.debt-actions {
+    display: flex;
+    gap: 8px;
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+.debt-actions .action-btn {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+}
+
+/* Modais */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background: white;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    width: 90%;
+    max-width: 500px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: -20px;
+    margin-right: -20px;
+}
+
+.close:hover {
+    color: #000;
+}
+
+.modal h3 {
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .summary-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .input-forms {
+        grid-template-columns: 1fr;
+    }
+    
+    .transactions {
+        grid-template-columns: 1fr;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .month-selector {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .current-month {
+        min-width: auto;
+    }
+    
+    .debts-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .debt-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .debt-actions {
+        align-self: flex-end;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .modal-content {
+        margin: 20% auto;
+        padding: 20px;
+    }
+    
+    .btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card,
+.form-container,
+.table-container,
+.batch-actions,
+.credit-cards {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Scrollbar personalizada */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #a8a8a8;
+}

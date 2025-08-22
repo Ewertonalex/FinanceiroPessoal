@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle Financeiro Pessoal</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1><i class="fas fa-wallet"></i> Controle Financeiro Pessoal</h1>
+            <div class="month-selector">
+                <button id="prevMonth" class="btn-month"><i class="fas fa-chevron-left"></i></button>
+                <span id="currentMonth" class="current-month">Janeiro 2024</span>
+                <button id="nextMonth" class="btn-month"><i class="fas fa-chevron-right"></i></button>
+            </div>
+        </header>
+
+        <!-- Resumo Financeiro -->
+        <section class="summary-cards">
+            <div class="card income">
+                <div class="card-icon">
+                    <i class="fas fa-arrow-up"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Receitas</h3>
+                    <p id="totalIncome">R$ 0,00</p>
+                </div>
+            </div>
+            <div class="card expense">
+                <div class="card-icon">
+                    <i class="fas fa-arrow-down"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Despesas</h3>
+                    <p id="totalExpense">R$ 0,00</p>
+                </div>
+            </div>
+            <div class="card balance">
+                <div class="card-icon">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div class="card-content">
+                    <h3>Saldo</h3>
+                    <p id="totalBalance">R$ 0,00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulários de Entrada -->
+        <section class="input-forms">
+            <div class="form-container">
+                <h3><i class="fas fa-plus-circle"></i> Adicionar Receita</h3>
+                <form id="incomeForm" class="form">
+                    <input type="text" id="incomeDescription" placeholder="Descrição da receita" required>
+                    <input type="number" id="incomeAmount" placeholder="Valor (R$)" step="0.01" min="0" required>
+                    <button type="submit" class="btn btn-success">Adicionar Receita</button>
+                </form>
+            </div>
+            <div class="form-container">
+                <h3><i class="fas fa-minus-circle"></i> Adicionar Despesa</h3>
+                <form id="expenseForm" class="form">
+                    <input type="text" id="expenseDescription" placeholder="Descrição da despesa" required>
+                    <input type="number" id="expenseAmount" placeholder="Valor (R$)" step="0.01" min="0" required>
+                    <button type="submit" class="btn btn-danger">Adicionar Despesa</button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Tabelas de Transações -->
+        <section class="transactions">
+            <div class="table-container">
+                <h3><i class="fas fa-list"></i> Receitas</h3>
+                <div class="table-wrapper">
+                    <table id="incomeTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="incomeTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="table-container">
+                <h3><i class="fas fa-list"></i> Despesas</h3>
+                <div class="table-wrapper">
+                    <table id="expenseTable" class="table">
+                        <thead>
+                            <tr>
+                                <th>Descrição</th>
+                                <th>Valor</th>
+                                <th>Ações</th>
+                            </tr>
+                        </thead>
+                        <tbody id="expenseTableBody">
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- Ações em Lote -->
+        <section class="batch-actions">
+            <h3><i class="fas fa-cogs"></i> Ações em Lote</h3>
+            <div class="action-buttons">
+                <button id="replicateMonth" class="btn btn-primary">
+                    <i class="fas fa-copy"></i> Replicar para Próximo Mês
+                </button>
+                <button id="clearMonth" class="btn btn-warning">
+                    <i class="fas fa-trash"></i> Limpar Dados do Mês
+                </button>
+                <button id="exportPDF" class="btn btn-info">
+                    <i class="fas fa-file-pdf"></i> Exportar PDF
+                </button>
+            </div>
+        </section>
+
+        <!-- Gestão de Cartões de Crédito -->
+        <section class="credit-cards">
+            <h3><i class="fas fa-credit-card"></i> Gestão de Cartões de Crédito</h3>
+            
+            <!-- Formulário para Adicionar Cartão -->
+            <div class="card-form">
+                <h4>Adicionar Novo Cartão</h4>
+                <form id="cardForm" class="form">
+                    <input type="text" id="cardName" placeholder="Nome do cartão" required>
+                    <button type="submit" class="btn btn-primary">Adicionar Cartão</button>
+                </form>
+            </div>
+
+            <!-- Lista de Cartões -->
+            <div class="cards-list" id="cardsList">
+                <!-- Cartões serão inseridos aqui dinamicamente -->
+            </div>
+
+            <!-- Formulário para Adicionar Dívida -->
+            <div class="debt-form">
+                <h4>Adicionar Nova Dívida</h4>
+                <form id="debtForm" class="form">
+                    <select id="debtCard" class="custom-select" required>
+                        <option value="">Selecione o cartão</option>
+                    </select>
+                    <input type="text" id="debtDescription" placeholder="Nome da dívida" required>
+                    <input type="number" id="debtAmount" placeholder="Valor da parcela (R$)" step="0.01" min="0" required>
+                    <input type="number" id="debtInstallments" placeholder="Quantidade de parcelas" min="1" required>
+                    <input type="number" id="debtCurrentInstallment" placeholder="Parcela atual" min="1" value="1" required>
+                    <button type="submit" class="btn btn-warning">Adicionar Dívida</button>
+                </form>
+            </div>
+
+            <!-- Lista de Dívidas por Cartão -->
+            <div class="debts-list">
+                <h4>Dívidas por Cartão</h4>
+                <div id="debtsList">
+                    <!-- Dívidas serão inseridas aqui dinamicamente -->
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal de Edição -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Editar Transação</h3>
+            <form id="editForm" class="form">
+                <input type="text" id="editDescription" placeholder="Descrição" required>
+                <input type="number" id="editAmount" placeholder="Valor (R$)" step="0.01" min="0" required>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Edição de Dívida -->
+    <div id="editDebtModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h3>Editar Dívida</h3>
+            <form id="editDebtForm" class="form">
+                <input type="text" id="editDebtDescription" placeholder="Nome da dívida" required>
+                <input type="number" id="editDebtAmount" placeholder="Valor da parcela (R$)" step="0.01" min="0" required>
+                <input type="number" id="editDebtInstallments" placeholder="Quantidade de parcelas" min="1" required>
+                <input type="number" id="editDebtCurrentInstallment" placeholder="Parcela atual" min="1" required>
+                <button type="submit" class="btn btn-primary">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal de Confirmação -->
+    <div id="confirmModal" class="modal">
+        <div class="modal-content">
+            <h3>Confirmar Ação</h3>
+            <p id="confirmMessage"></p>
+            <div class="modal-buttons">
+                <button id="confirmYes" class="btn btn-danger">Sim</button>
+                <button id="confirmNo" class="btn btn-secondary">Não</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.29/jspdf.plugin.autotable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
