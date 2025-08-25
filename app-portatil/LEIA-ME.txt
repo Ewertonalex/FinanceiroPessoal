@@ -1,0 +1,12 @@
+# Controle Financeiro Pessoal - Versão Portátil 
+ 
+## Como usar: 
+1. Execute "Iniciar-Controle-Financeiro.bat" 
+2. O aplicativo abrirá automaticamente 
+3. Seus dados serão salvos automaticamente 
+ 
+## Características: 
+- Aplicativo portátil (não precisa instalar) 
+- Dados salvos automaticamente 
+- Funciona offline 
+- Interface idêntica ao projeto web 

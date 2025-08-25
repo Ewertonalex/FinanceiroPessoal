@@ -1,160 +1,158 @@
 # 💰 Controle Financeiro Pessoal
 
-Um sistema completo de controle financeiro pessoal desenvolvido em HTML5, CSS3 e JavaScript puro, com interface moderna e intuitiva para gerenciar suas finanças mensais.
+Um sistema completo de controle financeiro pessoal com interface moderna e intuitiva, disponível como aplicação web e **aplicativo desktop executável**.
 
-## ✨ **Funcionalidades Principais**
+## 🚀 **Funcionalidades Principais**
 
-### 📊 **Controle Mensal**
+### **📊 Controle Financeiro Básico**
 - **Receitas e Despesas**: Adicione, edite e exclua transações
 - **Saldo Automático**: Cálculo automático do saldo mensal
-- **Navegação por Meses**: Visualize dados de qualquer mês
-- **Histórico Completo**: Acompanhe sua evolução financeira
+- **Tabelas Separadas**: Receitas e despesas em cores diferentes
+- **Navegação Mensal**: Mude entre meses facilmente
 
-### 💳 **Gestão de Cartões de Crédito**
-- **Cadastro de Cartões**: Organize seus cartões por nome
-- **Dívidas Parceladas**: Controle dívidas com parcelamento automático
-- **Atualização Mensal**: Sistema atualiza automaticamente as parcelas
-- **Status das Dívidas**: Visualize dívidas ativas e completadas
+### **💳 Gerenciamento de Cartões de Crédito**
+- **Cadastro de Cartões**: Adicione quantos cartões quiser
+- **Dívidas Parceladas**: Sistema inteligente de parcelas
+- **Atualização Automática**: Parcelas avançam automaticamente mês a mês
+- **Controle de Saldo**: Acompanhe o total devido em cada cartão
 
-### 🔄 **Ações em Lote**
-- **Replicar Mês**: Copie dados para o próximo mês
-- **Limpar Mês**: Remova todos os dados de um mês específico
-- **Exportar PDF**: Gere relatórios em PDF para impressão
+### **🔄 Sistema Inteligente de Parcelas**
+- **Cálculo Automático**: Parcelas avançam conforme os meses passam
+- **Histórico Completo**: Visualize o status das dívidas em qualquer mês
+- **Finalização Automática**: Dívidas desaparecem após a última parcela
+- **Consulta Histórica**: Volte aos meses passados e veja o status correto
 
-## 🚀 **Como Usar**
+### **⚡ Ações em Lote**
+- **Replicar Dados**: Copie todos os dados para o próximo mês
+- **Limpar Mês**: Apague todos os dados do mês atual
+- **Exportar PDF**: Gere relatórios completos em PDF
 
-### 1. **Primeira Execução**
-- Abra o arquivo `index.html` em qualquer navegador moderno
-- O sistema salva automaticamente seus dados no navegador
+## 🖥️ **Versões Disponíveis**
 
-### 2. **Adicionando Receitas/Despesas**
-- Preencha a descrição e valor
-- Clique em "Adicionar Receita" ou "Adicionar Despesa"
-- As transações aparecem nas tabelas correspondentes
+### **1. Aplicação Web**
+- Funciona em qualquer navegador
+- Dados salvos no localStorage
+- Interface responsiva e moderna
 
-### 3. **Gerenciando Cartões**
-- **Adicionar Cartão**: Digite o nome e clique em "Adicionar Cartão"
-- **Adicionar Dívida**: Selecione o cartão, preencha os dados da dívida
-- **Editar/Excluir**: Use os botões de ação em cada item
+### **2. Aplicativo Desktop (NOVO! 🎉)**
+- **Executável Windows (.exe)**
+- **Portátil** - não precisa instalar
+- **Funciona offline**
+- **Dados persistentes**
+- **Interface idêntica** à versão web
 
-### 4. **Navegando pelos Meses**
-- Use os botões **<** e **>** para navegar entre meses
-- As dívidas são atualizadas automaticamente ao avançar no tempo
-- Você pode voltar para meses passados e ver o histórico
+## 📦 **Instalação e Uso**
 
-## 🎯 **Sistema de Parcelas Inteligente**
+### **🌐 Versão Web**
+1. Clone o repositório
+2. Abra `index.html` no navegador
+3. Pronto! Funciona offline
 
-### **Como Funciona:**
-- **Agosto**: Parcela 1/5 - DÍVIDA ATIVA (R$ 100)
-- **Setembro**: Parcela 2/5 - DÍVIDA ATIVA (R$ 100)
-- **Outubro**: Parcela 3/5 - DÍVIDA ATIVA (R$ 100)
-- **Novembro**: Parcela 4/5 - DÍVIDA ATIVA (R$ 100)
-- **Dezembro**: Parcela 5/5 - DÍVIDA ATIVA (R$ 100)
-- **Janeiro**: Parcela 5/5 - **DÍVIDA COMPLETADA** (R$ 0)
-
-### **Características:**
-- ✅ **Histórico Preservado**: Navegue livremente pelos meses
-- ✅ **Atualização Automática**: Parcelas avançam automaticamente
-- ✅ **Status Visual**: Diferenciação clara entre dívidas ativas e completadas
-- ✅ **Cálculo Inteligente**: Valor mensal baseado no status atual
+### **💻 Versão Desktop**
+1. **Baixe o executável:** `controle-financeiro-pessoal.exe`
+2. **Execute o arquivo** - não precisa instalar
+3. **Use normalmente** - dados salvos automaticamente
 
 ## 🛠️ **Tecnologias Utilizadas**
 
-- **HTML5**: Estrutura semântica e moderna
-- **CSS3**: Design responsivo com Flexbox e Grid
-- **JavaScript ES6+**: Lógica robusta e orientada a objetos
-- **LocalStorage**: Persistência de dados no navegador
-- **jsPDF**: Geração de relatórios em PDF
-- **Font Awesome**: Ícones profissionais
-
-## 📱 **Design Responsivo**
-
-- **Desktop**: Layout otimizado para telas grandes
-- **Tablet**: Adaptação automática para dispositivos médios
-- **Mobile**: Interface amigável para smartphones
-- **Grid System**: Layout flexível que se adapta a qualquer tela
-
-## 🔧 **Instalação e Configuração**
-
-### **Requisitos:**
-- Navegador moderno (Chrome, Firefox, Safari, Edge)
-- Conexão com internet (apenas para carregar Font Awesome)
-
-### **Passos:**
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/Ewertonalex/FinanceiroPessoal.git
-   ```
-
-2. Navegue para a pasta:
-   ```bash
-   cd FinanceiroPessoal
-   ```
-
-3. Abra o arquivo `index.html` no navegador
+- **Frontend**: HTML5, CSS3, JavaScript ES6+
+- **Armazenamento**: LocalStorage (navegador)
+- **PDF**: jsPDF + jspdf-autotable
+- **Desktop**: Electron
+- **Empacotamento**: @electron/packager
 
 ## 📁 **Estrutura do Projeto**
 
 ```
-FinanceiroPessoal/
-├── index.html          # Página principal
-├── styles.css          # Estilos CSS
-├── script.js           # Lógica JavaScript
-├── .gitignore          # Arquivos ignorados pelo Git
-├── README.md           # Documentação
-└── assets/             # Recursos (se houver)
+Controle Financeiro/
+├── index.html              # Interface principal
+├── styles.css              # Estilos e design
+├── script.js               # Lógica da aplicação
+├── main.js                 # Processo principal do Electron
+├── package.json            # Configurações e dependências
+├── dist/                   # Arquivos de distribuição
+│   └── controle-financeiro-pessoal-win32-x64/
+│       └── controle-financeiro-pessoal.exe  # EXECUTÁVEL!
+├── app-portatil/           # Versão portátil alternativa
+└── README.md               # Este arquivo
 ```
 
-## 🎨 **Características do Design**
+## 🔧 **Desenvolvimento**
 
-- **Glassmorphism**: Efeito de vidro translúcido
-- **Gradientes**: Cores vibrantes e modernas
-- **Animações**: Transições suaves e responsivas
-- **Ícones**: Font Awesome para melhor usabilidade
-- **Paleta de Cores**: Verde para receitas, vermelho para despesas
+### **Para Executar em Desenvolvimento**
+```bash
+# Instalar dependências
+npm install
 
-## 🔒 **Segurança e Privacidade**
+# Executar aplicação web
+npm start
 
-- **Dados Locais**: Todas as informações ficam no seu navegador
-- **Sem Backend**: Não há envio de dados para servidores externos
-- **LocalStorage**: Persistência segura no dispositivo local
-- **Sem Cookies**: Não rastreamos suas atividades
+# Criar executável desktop
+npm run packager
+```
 
-## 🚀 **Futuras Melhorias**
+### **Para Criar Executável**
+```bash
+npm run packager
+```
+O arquivo será criado em: `dist/controle-financeiro-pessoal-win32-x64/`
 
-- [ ] **Sincronização na Nuvem**: Backup automático
-- [ ] **Múltiplas Contas**: Suporte a diferentes perfis
-- [ ] **Categorização**: Organização por categorias
-- [ ] **Gráficos**: Visualizações estatísticas
-- [ ] **Notificações**: Lembretes de pagamentos
-- [ ] **Importação/Exportação**: Suporte a CSV/Excel
+## 📱 **Design Responsivo**
 
-## 🤝 **Contribuição**
+- **Interface moderna** com gradientes e glassmorphism
+- **Cores intuitivas**: Verde para receitas, vermelho para despesas
+- **Layout responsivo** que funciona em qualquer tela
+- **Ícones profissionais** do Font Awesome
+- **Animações suaves** para melhor experiência
+
+## 💡 **Sistema Inteligente de Parcelas**
+
+O sistema calcula automaticamente:
+- **Parcela atual** baseada no mês de criação da dívida
+- **Parcelas restantes** para o mês visualizado
+- **Status da dívida** (ativa/completada)
+- **Valor devido** para cada mês específico
+
+**Exemplo**: Dívida de 5 parcelas criada em agosto
+- Agosto: Parcela 1 de 5
+- Setembro: Parcela 2 de 5
+- Outubro: Parcela 3 de 5
+- Novembro: Parcela 4 de 5
+- Dezembro: Parcela 5 de 5
+- Janeiro: Dívida completada (não aparece mais)
+
+## 🎯 **Casos de Uso**
+
+- **Controle pessoal** de receitas e despesas
+- **Gerenciamento** de cartões de crédito
+- **Acompanhamento** de dívidas parceladas
+- **Planejamento** financeiro mensal
+- **Relatórios** para análise financeira
+
+## 📄 **Licença**
+
+Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
+
+## 👨‍💻 **Autor**
+
+**Ewerton Alexander** - Desenvolvedor Full Stack
+
+## 🤝 **Contribuições**
 
 Contribuições são bem-vindas! Para contribuir:
 
 1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/AmazingFeature`)
-3. Commit suas mudanças (`git commit -m 'Add some AmazingFeature'`)
-4. Push para a branch (`git push origin feature/AmazingFeature`)
+2. Crie uma branch para sua feature
+3. Commit suas mudanças
+4. Push para a branch
 5. Abra um Pull Request
 
-## 📄 **Licença**
+## 📞 **Suporte**
 
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
-## 👨‍💻 **Autor**
-
-**Ewerton Alexander**
-- GitHub: [@Ewertonalex](https://github.com/Ewertonalex)
-- Projeto: [FinanceiroPessoal](https://github.com/Ewertonalex/FinanceiroPessoal)
-
-## 🙏 **Agradecimentos**
-
-- **Font Awesome** pelos ícones
-- **jsPDF** pela funcionalidade de PDF
-- **Comunidade Open Source** pelo suporte
+Para dúvidas ou problemas:
+- Abra uma issue no GitHub
+- Entre em contato com o autor
 
 ---
 
-⭐ **Se este projeto te ajudou, considere dar uma estrela no repositório!**
+**⭐ Se este projeto te ajudou, considere dar uma estrela no GitHub!**
